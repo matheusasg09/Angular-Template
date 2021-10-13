@@ -1,0 +1,16 @@
+.main-container {
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 15px auto;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+
+  display: flex;
+  justify-content: center;
+
+  > * {
+    flex: 1;
+  }
+}
