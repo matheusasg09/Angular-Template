@@ -7,11 +7,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { LoaderComponent } from './loader/loader.component';
 import { ButtonComponent } from './button/button.component';
 import { RouterModule } from '@angular/router';
+import { ModalComponent } from './modal/modal.component';
+import { DialogComponent } from './modal/dialog/dialog.component';
 
-const COMPONENTS = [LoaderComponent, ButtonComponent];
+const COMPONENTS = [LoaderComponent, ButtonComponent, ModalComponent];
 
 @NgModule({
-  declarations: [...COMPONENTS, ButtonComponent],
+  declarations: [...COMPONENTS, DialogComponent],
   imports: [
     CommonModule,
     MatProgressSpinnerModule,
@@ -19,5 +21,6 @@ const COMPONENTS = [LoaderComponent, ButtonComponent];
     MatButtonModule,
   ],
   exports: [...COMPONENTS],
+  entryComponents: [DialogComponent],
 })
 export class ComponentsModule {}

@@ -1,1 +1,9 @@
-<app-button label="teste" color="secondary"></app-button>
+<app-button label="Abrir modal" (click)="modalControl.open()">a</app-button>
+
+<app-modal [control]="modalControl">
+  <app-button
+    *ngIf="modalControl.isOpened"
+    label="teste"
+    color="secondary"
+  ></app-button>
+</app-modal>

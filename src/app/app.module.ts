@@ -10,6 +10,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { SharedModule } from './shared/shared.module';
 import { PipesModule } from './pipes/pipes.module';
 import { PagesModule } from './pages/pages.module';
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import { PagesModule } from './pages/pages.module';
      SharedModule,
      PipesModule,
      PagesModule,
+     DirectivesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
