@@ -1,6 +1,6 @@
 <app-button label="Abrir modal" (click)="modalControl.open()">a</app-button>
 
-<app-modal [control]="modalControl">
+<app-modal [control]="modalControl" size="xl">
   <app-button
     *ngIf="modalControl.isOpened"
     label="teste"
