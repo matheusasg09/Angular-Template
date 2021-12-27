@@ -1,9 +1,26 @@
-<app-button label="Abrir modal" (click)="modalControl.open()">a</app-button>
-
-<app-modal [control]="modalControl" size="xl">
-  <app-button
-    *ngIf="modalControl.isOpened"
-    label="teste"
-    color="secondary"
-  ></app-button>
-</app-modal>
+<div>
+  <form class="pt-5 px-3" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="form-group" [ngClass]="applyCSSerror('email')">
+        <div class="col-md-4">
+          <label for="name" class="form-label fw-bold">E-mail</label>
+          <input
+            type="email"
+            class="form-control"
+            id="name"
+            formControlName="email"
+          />
+          <app-field-control-error
+            [showError]="checkTouched('email')"
+            errorMessage="E-mail é Obrigatório"
+          ></app-field-control-error>
+          <app-field-control-error
+            [showError]="checkEmail()"
+            errorMessage="E-mail Inválido"
+          ></app-field-control-error>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+  </form>
+</div>
